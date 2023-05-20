@@ -15,19 +15,55 @@
         <title>Sofia Franco Portfolio</title>
     </head>
     <body>
-        <nav class="navbar">
-            <header>Sofia Franco</header>
-            <ul class="links">
-                <li><a href="/" class="active_link">Home</a></li>
-                <li><a href="./pages/about-me.html">About me</a></li>
-                <li><a href="./pages/services.html">Services</a></li>
-                <li><a href="./pages/portfolio.html">Portfolio</a></li>
-                <li><a href="./pages/contact.html">Contact</a></li>
-            </ul>
-            <ul class="display_settings">
-                <img id="us_flag" src="./assets/united-states.png" alt="united states flag" />
-                <img id="moon_icon" src="./assets/moon.png" alt="moon icon" />
-            </ul>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Sofia Franco</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbar"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav container-fluid mb-2 mb-lg-0 justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html"
+                                >Home</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/about-me.html">About me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/contact.html">Contact me</a>
+                        </li>
+                    </ul>
+                    <ul class="display-settings">
+                        <li>
+                            <img
+                                id="us-flag"
+                                src="./assets/united-states.png"
+                                alt="united states flag"
+                            />
+                        </li>
+                        <li>
+                            <img id="moon-icon" src="./assets/moon.png" alt="Dark Moon" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
         <main>
             <section class="introduction">
