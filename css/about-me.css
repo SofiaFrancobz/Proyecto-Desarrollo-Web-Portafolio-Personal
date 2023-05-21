@@ -53,72 +53,53 @@ main {
     align-items: center;
 }
 
-.introduction {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    max-width: 971px;
-    margin: 130px 0;
+.about {
+    margin: 90px 0;
     padding: 0 40px;
 }
 
-.info {
-    flex: 0 1 470px;
-    margin-right: 100px;
-    display: flex;
-    flex-direction: column;
+.about header {
+    text-align: center;
+    margin-bottom: 100px;
 }
 
-.info h1 {
+.about header h1 {
     font-size: 48px;
     font-weight: 600;
-    margin-bottom: 7px;
 }
 
-.info h1 .highlight {
+.about header h1 .highlight {
     color: #d27685;
 }
 
-.info h2 {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 24px;
-}
-
-.info p {
-    margin-bottom: 18px;
-}
-
-.info-buttons {
+.motivation-section {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    gap: 12px;
+    justify-content: center;
 }
 
-.info-buttons button {
-    padding: 10px 30px;
-    border-radius: 100px;
-    border: none;
-    cursor: pointer;
+.motivation-text {
+    flex: 0 1 480px;
 }
 
-.info-buttons #primary-btn {
-    background-color: #d27685;
-    color: #fff;
-}
-
-.info-buttons #secondary-btn {
-    background-color: #fff;
+.motivation-text span {
+    font-size: 28px;
+    font-weight: 500;
     color: #d27685;
-    box-shadow: -4px 4px 10px rgba(210, 118, 133, 0.3);
 }
 
-.logo-container {
-    flex: 0 1 317px;
+.motivation_text p {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 20px;
+    width: 60%;
 }
 
-.logo-container img {
+.about-img-container {
+    flex: 0 1 600px;
+}
+
+.about-img-container img {
     width: 100%;
 }
 /* Page content ends */
@@ -150,28 +131,33 @@ footer {
 /* Footer ends */
 
 @media (max-width: 732px) {
-    .introduction {
-        flex-direction: column;
-        margin-top: 28px;
+    .about header {
+        margin-bottom: 20px;
     }
 
-    .info {
+    .motivation-section {
+        flex-direction: column;
+    }
+
+    .motivation-text {
         flex: unset;
-        margin-right: 0;
+    }
+
+    .motivation-text span {
+        display: block;
         text-align: center;
     }
 
-    .info p {
+    .motivation-text p {
         text-align: justify;
     }
 
-    .info-buttons {
-        justify-content: center;
+    .about-img-container {
+        flex: unset;
+        text-align: center;
     }
 
-    .logo-container {
-        flex: unset;
-        width: 35%;
-        margin-bottom: 12px;
+    .about-img-container img {
+        width: 80%;
     }
 }
