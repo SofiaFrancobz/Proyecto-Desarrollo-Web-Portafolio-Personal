@@ -1,3 +1,9 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .navbar {
     padding-left: 20px;
     padding-right: 20px;
@@ -38,9 +44,10 @@
 }
 
 main {
+    flex: 1;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .introduction {
@@ -48,7 +55,7 @@ main {
     flex-direction: row-reverse;
     align-items: center;
     max-width: 971px;
-    margin-top: 130px;
+    margin: 130px 0;
     padding: 0 40px;
 }
 
@@ -112,6 +119,30 @@ main {
     width: 100%;
 }
 
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 0;
+    background-color: #d27685;
+}
+
+.social-container {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.social-container img {
+    width: 30px;
+}
+
+.disclaimer {
+    color: #fff;
+}
+
 @media (max-width: 732px) {
     .introduction {
         flex-direction: column;
@@ -135,5 +166,6 @@ main {
     .logo-container {
         flex: unset;
         width: 35%;
+        margin-bottom: 12px;
     }
 }
