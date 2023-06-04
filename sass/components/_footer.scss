@@ -1,0 +1,23 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 0;
+    background-color: #d27685;
+
+    .social-container {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+
+        img {
+            width: 30px;
+        }
+    }
+
+    .disclaimer {
+        color: #fff;
+    }
+}
