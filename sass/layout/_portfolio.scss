@@ -1,72 +1,67 @@
-main {
-    flex: 1;
-    @include flex($direction: column, $align: center);
+.projects {
+    margin: 90px 0;
+    padding: 0 40px;
 
-    .projects {
-        margin: 90px 0;
-        padding: 0 40px;
+    header {
+        text-align: center;
 
-        header {
-            text-align: center;
+        h1 {
+            font-size: 48px;
+            font-weight: 600;
 
-            h1 {
-                font-size: 48px;
-                font-weight: 600;
-
-                .highlight {
-                    color: $primary-color;
-                }
+            .highlight {
+                color: $primary-color;
             }
         }
+    }
 
-        .projects-container {
-            @include flex($direction: column);
-            row-gap: 40px;
-            margin-top: 72px;
+    .projects-container {
+        @include flex($direction: column);
+        row-gap: 40px;
+        margin-top: 72px;
 
-            .project {
-                @include flex($direction: row, $justify: center, $wrap: wrap);
-                column-gap: 48px;
-                row-gap: 24px;
+        .project {
+            @include flex($direction: row, $justify: center, $wrap: wrap);
+            column-gap: 48px;
+            row-gap: 24px;
 
-                &:nth-child(even) {
-                    flex-direction: row-reverse;
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+
+            .image-container {
+                max-width: 450px;
+
+                img {
+                    width: 100%;
+                    border-radius: 8px;
+                    box-shadow: -4px 4px 10px rgba(137, 157, 180, 0.5);
+                }
+            }
+
+            .project-info {
+                max-width: 600px;
+                text-align: center;
+                align-self: center;
+
+                p {
+                    text-align: justify;
                 }
 
-                .image-container {
-                    max-width: 450px;
-
-                    img {
-                        width: 100%;
-                        border-radius: 8px;
-                        box-shadow: -4px 4px 10px rgba(137, 157, 180, 0.5);
-                    }
+                h2 {
+                    margin-bottom: 28px;
+                    color: $primary-color;
                 }
 
-                .project-info {
-                    max-width: 600px;
-                    text-align: center;
-                    align-self: center;
-
-                    p {
-                        text-align: justify;
-                    }
-
-                    h2 {
-                        margin-bottom: 28px;
-                        color: $primary-color;
-                    }
-
-                    a {
-                        display: inline-block;
-                        padding: 8px 30px;
-                        border-radius: 100px;
-                        cursor: pointer;
-                        background-color: $primary-color;
-                        color: $tertiary-color;
-                        margin-top: 20px;
-                        text-decoration: none;
-                    }
+                a {
+                    display: inline-block;
+                    padding: 8px 30px;
+                    border-radius: 100px;
+                    cursor: pointer;
+                    background-color: $primary-color;
+                    color: $tertiary-color;
+                    margin-top: 20px;
+                    text-decoration: none;
                 }
             }
         }

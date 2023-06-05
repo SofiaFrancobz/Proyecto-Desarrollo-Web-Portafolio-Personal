@@ -1,80 +1,75 @@
-main {
-    flex: 1;
-    @include flex($direction: column, $align: center);
+.contact {
+    @include flex($direction: row, $justify: center);
+    margin: 90px 0;
+    padding: 0 40px;
 
-    .contact {
-        @include flex($direction: row, $justify: center);
-        margin: 90px 0;
-        padding: 0 40px;
+    .contact-form {
+        @include flex($direction: column);
+        flex: 0 1 608px;
 
-        .contact-form {
-            @include flex($direction: column);
-            flex: 0 1 608px;
+        header {
+            margin-bottom: 20px;
+            font-size: 40px;
+            font-weight: 600;
 
-            header {
-                margin-bottom: 20px;
-                font-size: 40px;
-                font-weight: 600;
-
-                .highlight {
-                    color: $primary-color;
-                }
-
-                h1 {
-                    font-size: 28px;
-                    font-weight: 400;
-                    color: $primary-color;
-                }
+            .highlight {
+                color: $primary-color;
             }
 
-            p {
-                margin-bottom: 20px;
-            }
-
-            input {
-                box-sizing: border-box;
-                margin-bottom: 20px;
-                height: 50px;
-                border-radius: 8px;
-                box-shadow: -4px 4px 30px rgba(210, 118, 133, 0.3);
-                border: none;
-                padding-left: 40px;
-            }
-
-            textarea {
-                margin-bottom: 20px;
-                height: 200px;
-                border-radius: 8px;
-                box-shadow: -4px 4px 30px rgba(210, 118, 133, 0.3);
-                border: none;
-                padding: 25px 0 0 40px;
-            }
-
-            button {
-                padding: 8px 30px;
-                border-radius: 100px;
-                cursor: pointer;
-                background-color: $primary-color;
-                color: $tertiary-color;
-                border: none;
-                align-self: flex-end;
+            h1 {
+                font-size: 28px;
+                font-weight: 400;
+                color: $primary-color;
             }
         }
 
-        .contact-img-container {
-            flex: 0 2 665px;
-            padding-top: 70px;
-            margin-left: 70px;
+        p {
+            margin-bottom: 20px;
+        }
 
-            img {
-                width: 100%;
-            }
+        input {
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            height: 50px;
+            border-radius: 8px;
+            box-shadow: -4px 4px 30px rgba(210, 118, 133, 0.3);
+            border: none;
+            padding-left: 40px;
+        }
+
+        textarea {
+            margin-bottom: 20px;
+            height: 200px;
+            border-radius: 8px;
+            box-shadow: -4px 4px 30px rgba(210, 118, 133, 0.3);
+            border: none;
+            padding: 25px 0 0 40px;
+        }
+
+        button {
+            padding: 8px 30px;
+            border-radius: 100px;
+            cursor: pointer;
+            background-color: $primary-color;
+            color: $tertiary-color;
+            border: none;
+            align-self: flex-end;
+        }
+    }
+
+    .contact-img-container {
+        flex: 0 2 665px;
+        padding-top: 70px;
+        margin-left: 70px;
+
+        img {
+            width: 100%;
         }
     }
 }
 
 @media (max-width: 960px) {
-    main .contact {
+    .contact {
         .contact-form {
             flex: unset;
         }

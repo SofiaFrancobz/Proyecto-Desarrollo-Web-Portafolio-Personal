@@ -1,46 +1,41 @@
-main {
-    flex: 1;
-    @include flex($direction: column, $align: center);
+.services {
+    margin: 90px 0;
+    padding: 0 40px;
 
-    .services {
-        margin: 90px 0;
-        padding: 0 40px;
+    header {
+        text-align: center;
 
-        header {
-            text-align: center;
+        h1 {
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 72px;
 
-            h1 {
-                font-size: 48px;
-                font-weight: 600;
-                margin-bottom: 72px;
-
-                .highlight {
-                    color: $primary-color;
-                }
+            .highlight {
+                color: $primary-color;
             }
         }
+    }
 
-        .card {
-            @include flex($direction: column, $align: center);
-            text-align: center;
-            padding: 28px 68px;
-            border-radius: 16px;
-            background-color: $tertiary-color;
-            box-shadow: -4px 4px 55px rgba(210, 118, 133, 0.35);
-            border: none;
+    .card {
+        @include flex($direction: column, $align: center);
+        text-align: center;
+        padding: 28px 68px;
+        border-radius: 16px;
+        background-color: $tertiary-color;
+        box-shadow: -4px 4px 55px rgba(210, 118, 133, 0.35);
+        border: none;
 
-            img {
-                width: 90px;
-            }
+        img {
+            width: 90px;
+        }
 
-            header {
-                font-size: 20px;
-                font-weight: 600;
-            }
+        header {
+            font-size: 20px;
+            font-weight: 600;
+        }
 
-            p {
-                margin-top: 24px;
-            }
+        p {
+            margin-top: 24px;
         }
     }
 }

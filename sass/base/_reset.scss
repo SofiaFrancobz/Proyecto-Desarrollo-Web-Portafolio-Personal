@@ -11,6 +11,18 @@ body {
     flex-direction: column;
 }
 
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* Elipsis decorativos */
+    background: url("../assets/ellipse-shape.svg") no-repeat right -60px top -130px,
+        url("../assets/ellipse-shape.svg") no-repeat left -80px bottom -160px;
+    background-size: 500px, auto;
+}
+
 li {
     list-style-type: none;
 }
