@@ -1,16 +1,10 @@
 footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
+    @include flex(column, center, center, 12px);
     padding: 20px 0;
-    background-color: #d27685;
+    background-color: $primary-color;
 
     .social-container {
-        display: flex;
-        flex-direction: row;
-        gap: 24px;
+        @include flex($direction: row, $gap: 24px);
 
         img {
             width: 30px;
@@ -18,6 +12,6 @@ footer {
     }
 
     .disclaimer {
-        color: #fff;
+        color: $tertiary-color;
     }
 }
