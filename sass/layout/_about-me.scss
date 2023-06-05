@@ -1,0 +1,88 @@
+main {
+    flex: 1;
+    @include flex($direction: column, $align: center);
+
+    .about {
+        margin: 90px 0;
+        padding: 0 40px;
+
+        header {
+            text-align: center;
+            margin-bottom: 100px;
+
+            h1 {
+                font-size: 48px;
+                font-weight: 600;
+
+                .highlight {
+                    color: $primary-color;
+                }
+            }
+        }
+
+        .motivation-section {
+            @include flex($direction: row, $justify: center);
+            column-gap: 80px;
+
+            .motivation-text {
+                flex: 0 1 480px;
+
+                span {
+                    font-size: 28px;
+                    font-weight: 500;
+                    color: $primary-color;
+                }
+
+                p {
+                    font-size: 18px;
+                    font-weight: 400;
+                    margin-top: 20px;
+                }
+            }
+
+            .about-img-container {
+                flex: 0 1 600px;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 732px) {
+    main {
+        .about {
+            header {
+                margin-bottom: 20px;
+            }
+
+            .motivation-section {
+                flex-direction: column;
+
+                .motivation-text {
+                    flex: unset;
+
+                    span {
+                        display: block;
+                        text-align: center;
+                    }
+
+                    p {
+                        text-align: justify;
+                    }
+                }
+
+                .about-img-container {
+                    flex: unset;
+                    text-align: center;
+
+                    img {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+}
