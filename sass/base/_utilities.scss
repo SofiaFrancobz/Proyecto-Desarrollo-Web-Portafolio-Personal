@@ -6,3 +6,12 @@
     gap: $gap;
     flex-wrap: $wrap;
 }
+
+@mixin highlighted-title($size: 28px, $weight: 500) {
+    font-size: $size;
+    font-weight: $weight;
+
+    .highlight {
+        color: $primary-color;
+    }
+}

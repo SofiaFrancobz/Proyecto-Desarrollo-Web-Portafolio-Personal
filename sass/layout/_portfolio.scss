@@ -6,12 +6,7 @@
         text-align: center;
 
         h1 {
-            font-size: 48px;
-            font-weight: 600;
-
-            .highlight {
-                color: $primary-color;
-            }
+            @include highlighted-title(48px, 600);
         }
     }
 

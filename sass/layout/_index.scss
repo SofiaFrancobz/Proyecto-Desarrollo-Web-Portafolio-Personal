@@ -18,13 +18,8 @@
         @include flex($direction: column);
 
         h1 {
-            font-size: 48px;
-            font-weight: 600;
+            @include highlighted-title(48px, 600);
             margin-bottom: 7px;
-
-            .highlight {
-                color: $primary-color;
-            }
         }
 
         h2 {
