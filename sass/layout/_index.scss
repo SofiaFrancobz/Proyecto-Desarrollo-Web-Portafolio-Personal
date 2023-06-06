@@ -34,24 +34,6 @@
 
         .info-buttons {
             @include flex($direction: row, $gap: 12px, $wrap: wrap);
-
-            button {
-                padding: 10px 30px;
-                border-radius: 100px;
-                border: none;
-                cursor: pointer;
-            }
-
-            #primary-btn {
-                background-color: $primary-color;
-                color: $tertiary-color;
-            }
-
-            #secondary-btn {
-                background-color: $tertiary-color;
-                color: $primary-color;
-                box-shadow: -4px 4px 10px rgba(210, 118, 133, 0.3);
-            }
         }
     }
 }

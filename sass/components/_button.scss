@@ -1,0 +1,31 @@
+button,
+a.link-button {
+    padding: 8px 30px;
+    border-radius: 100px;
+    cursor: pointer;
+    border: none;
+    align-self: flex-end;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+
+    &.primary {
+        background-color: $primary-color;
+        color: $tertiary-color;
+
+        &:hover {
+            box-shadow: -4px 4px 10px rgba(210, 118, 133, 0.3);
+            background-color: darken($primary-color, 10%);
+        }
+    }
+
+    &.secondary {
+        background-color: $tertiary-color;
+        color: $primary-color;
+        box-shadow: -4px 4px 10px rgba(210, 118, 133, 0.3);
+
+        &:hover {
+            background-color: $primary-color;
+            color: $tertiary-color;
+        }
+    }
+}
