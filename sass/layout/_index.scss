@@ -1,65 +1,130 @@
-.introduction {
-    @include flex($direction: row-reverse, $align: center);
+.home-container {
     max-width: 971px;
-    margin: 130px 0;
     padding: 0 40px;
+    margin: 80px 0;
 
-    .logo-container {
-        flex: 0 1 317px;
+    .introduction {
+        @include flex($direction: row-reverse, $align: center);
+        margin-bottom: 60px;
 
-        img {
-            width: 100%;
+        .logo-container {
+            flex: 0 1 317px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .info {
+            flex: 0 1 470px;
+            margin-right: 100px;
+            @include flex($direction: column);
+
+            h1 {
+                @include highlighted-title(48px, 600);
+                margin-bottom: 7px;
+            }
+
+            h2 {
+                font-size: 20px;
+                font-weight: 500;
+                margin-bottom: 24px;
+            }
+
+            p {
+                margin-bottom: 18px;
+            }
+
+            .info-buttons {
+                @include flex($direction: row, $gap: 12px, $wrap: wrap);
+            }
         }
     }
 
-    .info {
-        flex: 0 1 470px;
-        margin-right: 100px;
-        @include flex($direction: column);
+    .technical-skills {
+        margin-bottom: 60px;
 
-        h1 {
+        header h2 {
             @include highlighted-title(48px, 600);
-            margin-bottom: 7px;
         }
 
-        h2 {
-            font-size: 20px;
-            font-weight: 500;
-            margin-bottom: 24px;
+        .skills-container {
+            margin-top: 40px;
+
+            .skill {
+                margin-top: 30px;
+
+                img {
+                    width: 80px;
+                }
+
+                .skill-info {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-end;
+                    column-gap: 24px;
+
+                    span {
+                        font-size: 24px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+    .certifications {
+        header h2 {
+            @include highlighted-title(48px, 600);
         }
 
-        p {
-            margin-bottom: 18px;
-        }
-
-        .info-buttons {
-            @include flex($direction: row, $gap: 12px, $wrap: wrap);
+        .carousel {
+            margin-top: 40px;
         }
     }
 }
 
 @media (max-width: 732px) {
-    .introduction {
-        flex-direction: column;
-        margin-top: 28px;
+    .small-screen-font {
+        font-size: 36px;
+        text-align: center;
+    }
 
-        .logo-container {
-            flex: unset;
-            width: 35%;
-            margin-bottom: 12px;
-        }
+    .home-container {
+        .introduction {
+            flex-direction: column;
+            margin-top: 28px;
 
-        .info {
-            flex: unset;
-            margin-right: 0;
-            text-align: center;
-
-            p {
-                text-align: justify;
+            .logo-container {
+                flex: unset;
+                width: 35%;
+                margin-bottom: 12px;
             }
 
-            .info-buttons {
-                justify-content: center;
+            .info {
+                flex: unset;
+                margin-right: 0;
+                text-align: center;
+
+                p {
+                    text-align: justify;
+                }
+
+                .info-buttons {
+                    justify-content: center;
+                }
+            }
+        }
+
+        .technical-skills {
+            header h2 {
+                @extend .small-screen-font;
+            }
+        }
+
+        .certifications {
+            header h2 {
+                @extend .small-screen-font;
             }
         }
     }
