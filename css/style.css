@@ -190,6 +190,10 @@ a.link-button.secondary:hover {
 }
 .home-container .technical-skills .skills-container .skill {
   margin-top: 30px;
+  cursor: pointer;
+}
+.home-container .technical-skills .skills-container .skill:hover img {
+  animation: scale-animation 1s ease-in-out alternate infinite;
 }
 .home-container .technical-skills .skills-container .skill img {
   width: 80px;
@@ -204,6 +208,42 @@ a.link-button.secondary:hover {
   font-size: 24px;
   font-weight: 600;
 }
+.home-container .technical-skills .skills-container .skill .knowledge-bar {
+  width: 100%;
+  height: 20px;
+  border: solid 1px #ccc;
+  border-radius: 50px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.24);
+  margin-top: 20px;
+  overflow: hidden;
+}
+.home-container .technical-skills .skills-container .skill .knowledge-bar .knowledge-level {
+  height: 100%;
+}
+.home-container .technical-skills .skills-container #word-skill .knowledge-bar .knowledge-level {
+  width: 100%;
+  background: linear-gradient(to right, #6c9bcf, #e4f1ff);
+}
+.home-container .technical-skills .skills-container #powerpoint-skill .knowledge-bar .knowledge-level {
+  width: 100%;
+  background: linear-gradient(to right, #f79540, #ffecdc);
+}
+.home-container .technical-skills .skills-container #photoshop-skill .knowledge-bar .knowledge-level {
+  width: 75%;
+  background: linear-gradient(to right, #506a86, #bcdcff);
+}
+.home-container .technical-skills .skills-container #illustrator-skill .knowledge-bar .knowledge-level {
+  width: 90%;
+  background: linear-gradient(to right, #614a35, #eabd95);
+}
+.home-container .technical-skills .skills-container #xd-skill .knowledge-bar .knowledge-level {
+  width: 80%;
+  background: linear-gradient(to right, #524362, #ddc5f6);
+}
+.home-container .technical-skills .skills-container #figma-skill .knowledge-bar .knowledge-level {
+  width: 90%;
+  background: linear-gradient(to right, #d27685, #ffd3db);
+}
 .home-container .certifications header h2 {
   font-size: 48px;
   font-weight: 600;
@@ -214,7 +254,19 @@ a.link-button.secondary:hover {
 .home-container .certifications .carousel {
   margin-top: 40px;
 }
+.home-container .certifications .carousel .carousel-item img {
+  transition: transform 0.3s ease-in-out;
+  transform: scale(0.9);
+}
+.home-container .certifications .carousel .carousel-item img:hover {
+  transform: scale(1);
+}
 
+@keyframes scale-animation {
+  to {
+    transform: scale(1.2);
+  }
+}
 @media (max-width: 732px) {
   .small-screen-font, .home-container .certifications header h2, .home-container .technical-skills header h2 {
     font-size: 36px;
@@ -239,6 +291,9 @@ a.link-button.secondary:hover {
   }
   .home-container .introduction .info .info-buttons {
     justify-content: center;
+  }
+  .home-container .certifications .carousel .carousel-item img {
+    all: unset;
   }
 }
 .about {
